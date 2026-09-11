@@ -1,31 +1,29 @@
-# Estudo de caso SEMAD-GO ó queimadas em Goi·s (2024)
+Ôªø# Estudo de caso SEMAD-GO ‚Äî queimadas em Goi√°s (2024)
 
-Consultoria de dados para a Secretaria de Meio Ambiente de Goi·s (SEMAD-GO): an·lise do padr„o de queimadas no estado durante a safra de seca de 2024 e recomendaÁ„o de prioridades de fiscalizaÁ„o ambiental.
+Consultoria de dados para a Secretaria de Meio Ambiente de Goi√°s (SEMAD-GO): an√°lise do padr√£o de queimadas no estado durante a safra de seca de 2024 e recomenda√ß√£o de prioridades de fiscaliza√ß√£o ambiental.
 
-Trabalho da disciplina de Data Science (Rede XPTO).
+Disciplina: Data Science ‚Äî 8¬∫ per√≠odo.
 
-## Objetivo
+## Entrega
 
-Calcular medidas de tendÍncia central e de dispers„o sobre um dataset real de focos de queimada em 31 municÌpios goianos:
-
-- mÈdia
-- mediana
-- moda
-- amplitude
-- vari‚ncia
-- desvio padr„o
-- coeficiente de variaÁ„o
-
-As respostas do question·rio (10 questıes) registram o c·lculo ou o cÛdigo usado, n„o sÛ o n˙mero final.
-
-## Arquivos
-
-| Arquivo | DescriÁ„o |
+| Arquivo | O que √© |
 | --- | --- |
-| `docs/atividade_queimadas_goias.pdf` | Enunciado, contexto, dicion·rio do dataset e as 10 questıes |
-| `data/focos_queimada_goias.csv` | Dataset em CSV |
-| `data/focos_queimada_goias.xlsx` | Dataset em Excel |
+| [notebooks/estudo_caso_semad_queimadas.ipynb](notebooks/estudo_caso_semad_queimadas.ipynb) | Notebook com todos os c√°lculos (c√≥digo + sa√≠das) |
+| [docs/respostas_questionario.md](docs/respostas_questionario.md) | As 10 respostas numeradas, com c√≥digo e justificativa |
+| [docs/atividade_queimadas_goias.pdf](docs/atividade_queimadas_goias.pdf) | Enunciado original |
+| [data/focos_queimada_goias.csv](data/focos_queimada_goias.csv) | Dataset |
 
 ## Como reproduzir
 
-Os c·lculos podem ser feitos em Python ou Excel. O importante È deixar o rastro do c·lculo em cada resposta.
+```text
+pip install -r requirements.txt
+jupyter notebook notebooks/estudo_caso_semad_queimadas.ipynb
+```
+
+Vari√¢ncia e desvio padr√£o s√£o **populacionais** (`ddof=0`), como pede o enunciado.
+
+## Resultado principal
+
+- Maior m√©dia de focos por munic√≠pio/m√™s: **Sul/Sudoeste (43,66)** vs Norte/Nordeste (32,02)
+- Sul/Sudoeste √© relativamente mais homog√™neo (**CV 89,01%** vs 102,20%)
+- Prioridade de fiscaliza√ß√£o cont√≠nua: **Sul/Sudoeste**, com opera√ß√µes pontuais nos picos do Norte/Nordeste
